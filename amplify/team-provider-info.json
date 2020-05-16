@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-formaws-dev-161449-authRole",
+            "UnauthRoleArn": "arn:aws:iam::038909035013:role/amplify-formaws-dev-161449-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::038909035013:role/amplify-formaws-dev-161449-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-formaws-dev-161449-deployment",
+            "UnauthRoleName": "amplify-formaws-dev-161449-unauthRole",
+            "StackName": "amplify-formaws-dev-161449",
+            "StackId": "arn:aws:cloudformation:eu-central-1:038909035013:stack/amplify-formaws-dev-161449/9c515c80-977f-11ea-9961-064a8d32fc9e",
+            "AmplifyAppId": "d2wn625y1q58r7"
+        }
+    }
+}
