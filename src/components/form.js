@@ -25,7 +25,7 @@ export default class Form extends Component {
 	render() {
 		return (
 			<div>
-				<h2>it works!</h2>
+				<h2>magic form</h2>
 				<form>
 					<input
 						type='text'
@@ -43,10 +43,10 @@ export default class Form extends Component {
 						onChange={this.handleChange}
 					/>
 				</form>
+				<button onClick={this.clearForm}></button>
 				<h2>
 					{this.state.message} {this.state.email}
 				</h2>
-				<button onClick={this.clearForm}></button>
 			</div>
 		);
 	}
