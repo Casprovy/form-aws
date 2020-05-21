@@ -43,7 +43,7 @@ export default class Form extends Component {
 						onChange={this.handleChange}
 					/>
 				</form>
-				<button onClick={this.clearForm}></button>
+				<button onClick={this.clearForm}>Submit</button>
 				<h2>
 					{this.state.message} {this.state.email}
 				</h2>
