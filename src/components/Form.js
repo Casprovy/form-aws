@@ -4,14 +4,28 @@ export default class Form extends Component {
 	constructor() {
 		super();
 		this.state = {
-			message: '',
+			name: '',
 			email: '',
+			body: '',
 		};
 	}
 
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value,
+		});
+	};
+
+	handleClick = (event) => {
+		event.preventDefault();
+		const data = this.state;
+		console.log(data);
+		fetch('https://ju7qrql2j0.execute-api.eu-central-1.amazonaws.com/mailUsDeploy/contactus', {
+			method: 'POST',
+			dataType: 'json',
+			crossDomain: 'true',
+			contentType: 'application/json; charset=utf-8',
+			data: JSON.stringify(data),
 		});
 	};
 
@@ -25,12 +39,12 @@ export default class Form extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<form>
+				<form onSubmit={this.handleClick}>
 					<input
 						type='text'
-						value={this.state.message}
-						name='message'
-						placeholder='your message'
+						value={this.state.name}
+						name='name'
+						placeholder='your name'
 						onChange={this.handleChange}
 					/>
 					<br />
@@ -41,6 +55,16 @@ export default class Form extends Component {
 						placeholder='your email'
 						onChange={this.handleChange}
 					/>
+					<br />
+					<input
+						type='text'
+						value={this.state.body}
+						name='body'
+						placeholder='your message'
+						onChange={this.handleChange}
+					/>
+					<br />
+					<input type='submit' />
 				</form>
 			</React.Fragment>
 		);
