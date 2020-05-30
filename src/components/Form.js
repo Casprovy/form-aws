@@ -33,6 +33,15 @@ export default class Form extends Component {
 				body: JSON.stringify(data),
 			}
 		);
+		this.clearForm();
+	};
+
+	clearForm = () => {
+		this.setState({
+			name: '',
+			email: '',
+			body: '',
+		});
 	};
 
 	render() {
