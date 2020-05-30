@@ -16,17 +16,20 @@ export default class Form extends Component {
 		});
 	};
 
-	handleClick = (event) => {
-		event.preventDefault();
+	handleClick = async (e) => {
+		e.preventDefault();
 		const data = this.state;
 		console.log(data);
-		fetch('https://ju7qrql2j0.execute-api.eu-central-1.amazonaws.com/mailUsDeploy/contactus', {
-			method: 'POST',
-			dataType: 'json',
-			crossDomain: 'true',
-			contentType: 'application/json; charset=utf-8',
-			data: JSON.stringify(data),
-		});
+		await fetch(
+			'https://ju7qrql2j0.execute-api.eu-central-1.amazonaws.com/mailUsDeploy/contactus',
+			{
+				method: 'POST',
+				dataType: 'json',
+				crossDomain: 'true',
+				contentType: 'application/json; charset=utf-8',
+				body: JSON.stringify(data),
+			}
+		);
 	};
 
 	clearForm = () => {
