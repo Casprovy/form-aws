@@ -18,8 +18,11 @@ export default class Form extends Component {
 
 	handleClick = async (e) => {
 		e.preventDefault();
-		const data = this.state;
-		console.log(data);
+		const data = {
+			name: this.state.name,
+			email: this.state.email,
+			body: this.state.body,
+		};
 		await fetch(
 			'https://ju7qrql2j0.execute-api.eu-central-1.amazonaws.com/mailUsDeploy/contactus',
 			{
