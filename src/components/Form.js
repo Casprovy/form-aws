@@ -35,13 +35,6 @@ export default class Form extends Component {
 		);
 	};
 
-	clearForm = () => {
-		this.setState({
-			message: '',
-			email: '',
-		});
-	};
-
 	render() {
 		return (
 			<React.Fragment>
